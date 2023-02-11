@@ -41,7 +41,7 @@ def word_ladder(start_word, end_word, dictionary_file='words5.dict'):
     if start_word == end_word:
         return stack
     with open('words5.dict') as f:
-        dictionary_file = [ word.strip() for word in f ]
+        dictionary_file = [word.strip() for word in f]
 
     while len(queue) != 0:
         current_stack = queue.popleft()
@@ -74,7 +74,7 @@ def verify_word_ladder(ladder):
         if count == 0:
             is_adjacent.append(word)
         else:
-            if _adjacent(word, ladder[count-1]) is True:
+            if _adjacent(word, ladder[count - 1]) is True:
                 is_adjacent.append(word)
             else:
                 return False
